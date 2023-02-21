@@ -1,0 +1,51 @@
+---
+title: "Andreas Handel - Brief professional bio"
+comments: false
+---
+
+
+
+### EDUCATION
+#### Doctorate in Administrative Sciences - Finance and Insurance (Ph.D.)
+* Laval University, Quebec
+* 2019-present
+
+#### Master of Science in Administration - Finance (M. Sc)
+* Laval University, Quebec
+* 2017-2018
+
+#### Bachelor of Business Administration - Finance (B.A.A.)
+* Laval University, Quebec
+* 2013-2017
+
+
+
+### EXPERIENCE
+
+#### Laval University
+##### Teaching
+* GSF-3100 Capital market (Fall/Winter 2021, Fall 2022 and Winter 2023)
+* GSF-6053 Financial Econometrics (Winter 2022)
+* GSF-1500 Financial Management (Summer 2022)
+
+##### Graduate Teaching Assistant
+* GSF-2101 Portfolio Management
+* GSF-6025 Financial Strategies and Policies I
+* GSF-6008 Corporate finance
+* GSF-2102 Corporate finance
+* GSF-6028 Financial Theory
+
+##### Graduate Research Assistant
+* 2017 - 2021
+* Real estate database creation
+* Hedonic modeling
+* Literature review on financial problematics
+* Program econometric regression models on R, SAS, MATLAB.
+
+### RESEARCH PROJECTS
+* Has financialization changed the impact of macro announcements ?
+* Do macro announcement surprises cause changes in liquidity, volatility or arbitrage opportunity in the Exchanged Traded Fund market?
+
+### TECHNICAL STRENGTHS
+* **Computer Languages:** SAS, R, MatLab, STATA, Python, SQL, Latex
+* **Databases:** COMPUSTAT, CRSP, Bloomberg, Morningstar, Thomson Reuters

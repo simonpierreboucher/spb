@@ -1,0 +1,14 @@
+{
+  "hash": "a8fcfc65fe278c64a4c9c698f44f2c70",
+  "result": {
+    "markdown": "---\ntitle: \"\"\nabout:\n  template: trestles\n  image: files/avatar.jpg\n  links:\n    - icon: globe\n      text: Web\n      href: https://www4.fsa.ulaval.ca/etudiant/simon-pierre-boucher/\n    - icon: github\n      text: Github\n      href: https://github.com/andreashandel\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com/spbou4\n    - icon: linkedin\n      text: LinkedIn\n      href: https://www.linkedin.com/in/simon-pierre-boucher-52b889145/\ncomments: false\n---\n\n::: {.cell}\n\n:::\n\n\n\nI am a PHD student in finance at University Laval, [Department of Finance, Insurance and Real Estate](https://www4.fsa.ulaval.ca/etudiant/simon-pierre-boucher/).\n\nI am currently in the process of writing my thesis in finance at Laval University. My research and academic interest is in econometric methods (time series), high frequency data modeling, impact of macroeconomic announcements and commodity financialization.\n\nIn order to model high frequency financial data, I use the Language R.\n\n\n<!-- I send out a monthly (or less frequent) newsletter with updates and musings on my various projects. If interested, [you can subscribe here.](subscribe.html) -->\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,39 @@
+---
+title: ""
+about:
+  template: trestles
+  image: files/avatar.jpg
+  links:
+    - icon: globe
+      text: Web
+      href: https://www4.fsa.ulaval.ca/etudiant/simon-pierre-boucher/
+    - icon: github
+      text: Github
+      href: https://github.com/andreashandel
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/spbou4
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/simon-pierre-boucher-52b889145/
+comments: false
+---
+
+```{r, echo=FALSE}
+# Based on: https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/#netlify-redirects
+# lines to insert to a netlify _redirect file
+redirects <- paste0("/talk /presentations \n/talks /presentations \n/post /posts")
+# write the _redirect file
+writeLines(redirects, here::here("_site", "_redirects"))
+
+```
+
+
+I am a PHD student in finance at University Laval, [Department of Finance, Insurance and Real Estate](https://www4.fsa.ulaval.ca/etudiant/simon-pierre-boucher/).
+
+I am currently in the process of writing my thesis in finance at Laval University. My research and academic interest is in econometric methods (time series), high frequency data modeling, impact of macroeconomic announcements and commodity financialization.
+
+In order to model high frequency financial data, I use the Language R.
+
+
+<!-- I send out a monthly (or less frequent) newsletter with updates and musings on my various projects. If interested, [you can subscribe here.](subscribe.html) -->
