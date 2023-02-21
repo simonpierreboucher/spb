@@ -17,8 +17,8 @@ execute:
 
 # Default author
 author:
-  - name: Andreas Handel
-    url: https://www.andreashandel.com
+  - name: Simon-Pierre Boucher
+    url: 
 
 # Default fields for citation
 citation: true

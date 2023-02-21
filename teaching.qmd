@@ -1,0 +1,64 @@
+---
+title: "Teaching"
+comments: false
+---
+
+[GSF-3100 Capital market (Fall/Winter 2021)](https://www4.fsa.ulaval.ca/cours/GSF-3100/)
+
+The objective of this course is to analyze capital markets, their main financial instruments and their roles in the intermediation of funds and risk; to examine the role of financial institutions and supervisory agencies, particularly in the Canadian context; analyze the term structure of interest rates and the volatility of fixed income securities, government, corporate and international bond markets; study fixed income securities with optional clauses and the main financial markets for risk intermediation classified according to the instruments traded in them, i.e., asset-backed securities, futures, options and swaps markets
+
+* [Slide S01](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%201/GSF3100_S01.pdf)
+
+* [Slide S02](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%202/GSF3100_S02.pdf)
+
+* [Slide S03](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%203/GSF3100_S03.pdf)
+
+* [Slide S04](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%204/GSF3100_S04.pdf)
+
+* [Slide S05](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%205/GSF3100_S05.pdf)
+
+* [Slide S06](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%206/GSF3100_S6.pdf)
+
+* [Slide S07](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%207/GSF3100_S7.pdf)
+
+* [Slide S08](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%208/GSF3100_S08.pdf)
+
+* [Slide S09A](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%209%20/a/GSF3100_S09a.pdf)
+
+* [Slide S09B](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%209%20/b/GSF3100_S09b.pdf)
+
+* [Slide S09C](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%209%20/c/GSF3100_S09c.pdf)
+
+* [Slide S10A](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%2010/a/GSF3100_S10a.pdf)
+
+* [Slide S10B](https://github.com/simonpierreboucher/GSF3100/blob/main/Section%2010/b/GSF3100_S10b.pdf)
+
+[GSF-6053 Financial Econometrics (Winter 2022)](https://www4.fsa.ulaval.ca/cours/GSF-6053/)
+
+This course familiarizes the student with the many practical dimensions of the use of econometric methods and estimation techniques in finance. Emphasis is placed on modeling problems and financial applications. Basic econometric models and concepts related to financial markets are presented. The student is expected to have acquired a basic knowledge of statistics.
+
+* [Slide S02](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%202/GSF6053_S2.pdf)
+
+* [Slide S03](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%203/GSF6053_S3.pdf)
+
+* [Slide S04](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%204/GSF6053_S4.pdf)
+
+* [Slide S05](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%205/GSF6053_S5.pdf)
+
+* [Slide S06](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%206/GSF6053_S6.pdf)
+
+* [Slide S07](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%207/GSF6053_S7.pdf)
+
+* [Slide S08](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%208/GSF6053_S8.pdf)
+
+* [Slide S09](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%209/GSF6053_S9.pdf)
+
+* [Slide S10](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%2010/GSF6053_S10.pdf)
+
+* [Slide S11](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%2011/GSF6053_S11.pdf)
+
+* [Slide S12](https://github.com/simonpierreboucher/GSF6053/blob/main/Séance%2012/GSF6053_S12.pdf)
+
+[GSF-1500 Financial Management (Summer 2022)](https://www4.fsa.ulaval.ca/cours/GSF-1500/)
+
+The course aims to introduce the future administrator to the principles and techniques of modern financial management. The teaching of theoretical models is focused on the current practice of corporate financial management. It serves mainly to develop the essential tools for decision-making. The principles and tools developed in this course are critically applied to key financial decisions: the choice of investments, the evaluation of the cost of capital and the choice of permanent financing (corporate capital structure and dividend policy).

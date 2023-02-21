@@ -1,0 +1,16 @@
+---
+title: "Research"
+comments: false
+---
+
+## Working Paper
+
+**Boucher, Simon-Pierre** and Gagnon, Marie-Hélène and Power, Gabriel, Has Financialization Changed the Impact of Macro Announcements on Us Commodity Markets? (May 6, 2022). Available at SSRN: https://ssrn.com/abstract=4009292 or http://dx.doi.org/10.2139/ssrn.4009292
+
+**Abstract**
+
+The transition to a sustainable energy future requires considerable investments, which can be discouraged by heightened volatility in commodity markets. We investigate, using high-frequency data, the impact of macroeconomic announcements on commodity futures returns and volatility, while accounting for the financialization of commodities. We find that financialization lessens the impact of macro news on commodity markets, as measured by price drift and volatility changes. This result is consistent with prior literature suggesting that financial participants improve liquidity and price discovery while reducing volatility. Assuming that traditional market participants prefer stability, our results suggest a beneficial impact of financialization, especially for pro-cyclical commodities such as crude oil and natural gas.
+
+* Keywords: commodities; futures; spillover; financialization; high-frequency; commercial; institutional; volatility; macro; announcements; surprise; events
+
+* JEL Classification: E44, G13, G14, G15

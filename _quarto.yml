@@ -36,16 +36,10 @@ website:
     left:
       - text: "About"
         file: about.qmd
-      - text: "Posts"
-        file: posts.qmd
-      - text: "Presentations"
-        file: presentations.qmd
-      - text: "Projects"
-        file: projects.qmd
-      # - text: "Subscribe"
-      #   file: subscribe.qmd
-  
-
+      - text: "Teaching"
+        file: teaching.qmd
+      - text: "Research"
+        file: research.qmd
 
   page-footer:
     left: |

@@ -1,5 +1,5 @@
 ---
-title: "Andreas Handel - Brief professional bio"
+title: ""
 comments: false
 ---
 
