@@ -1,3 +1,2 @@
-# Andreas Handel website 
+# Simon-Pierre Boucher
 
-Github repository containg files for the personal website of Andreas Handel. [The website can be found here.](https://www.andreashandel.com/)
