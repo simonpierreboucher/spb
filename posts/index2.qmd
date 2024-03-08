@@ -1,0 +1,81 @@
+---
+title: "R function that computes all the main descriptive statistics"
+format: html
+editor: visual
+author:
+  - name: Simon-Pierre Boucher
+    orcid: 0000-0002-3756-3937
+    email: simon-pierre.boucher.1@ulaval.ca
+    affiliations:
+      - name: Université Laval
+        address: 2325 Rue de l'Université
+        city: Québec
+        state: QC 
+        postal-code: G1V 0A6
+---
+
+This function computeDescriptiveStats takes a numeric vector data as input and computes:
+
+* Mean
+* Median
+* Variance
+* Standard Deviation
+* Skewness
+* Kurtosis
+* Minimum
+* Maximum
+* Range (minimum and maximum)
+* Quantiles (default quantiles include 0%, 25%, 50%, 75%, 100%)
+
+To use this function, you need to have R installed on your system, and you should ensure that the e1071 package is installed as well. You can test this function by copying the code into an R script or R console. The set.seed(123) part ensures that the random data generated is the same every time you run the script for reproducibility purposes.
+
+##### Load necessary library
+```{r}
+if (!require(e1071)) install.packages("e1071")
+library(e1071)
+```
+
+
+##### Define the function
+```{r}
+computeDescriptiveStats <- function(data) {
+  if (!is.numeric(data)) {
+    stop("Data must be numeric")
+  }
+  
+  stats <- list(
+    mean = mean(data),
+    median = median(data),
+    variance = var(data),
+    standard_deviation = sd(data),
+    skewness = skewness(data),
+    kurtosis = kurtosis(data),
+    minimum = min(data),
+    maximum = max(data),
+    range = range(data),
+    quantiles = quantile(data)
+  )
+  
+  return(stats)
+}
+```
+
+
+##### Test the function with random data
+
+```{r}
+set.seed(123) # For reproducibility
+random_data <- rnorm(100) # Generate 100 random numbers from a normal distribution
+```
+
+
+##### Compute descriptive statistics
+```{r}
+descriptive_stats <- computeDescriptiveStats(random_data)
+```
+
+
+# Print the results
+```{r}
+print(descriptive_stats)
+```

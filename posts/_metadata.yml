@@ -21,12 +21,12 @@ execute:
 # Default author
 # comment out since I have it on every post and otherwise it shows up twice
 # author:
-#  - name: Andreas Handel
-#    url: https://www.andreashandel.com
+#  - name: Simon-Pierre Boucher
+#    url: spboucher.net
 
 # Default fields for citation
 citation: true
 
 comments: 
   utterances:
-    repo: andreashandel/andreashandelwebsite
+    repo: simonpierreboucher/website

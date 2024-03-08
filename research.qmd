@@ -4,13 +4,27 @@ comments: false
 ---
 
 ## Working Paper
+#### Has Financialization Changed the Impact of Macro Announcements on Us Commodity Markets?
+* **Author:** Boucher, Simon-Pierre, Gagnon, Marie-Hélène and Power, Gabriel
+* **Keywords:** commodities; futures; spillover; financialization; high-frequency; commercial; institutional; volatility; macro; announcements; surprise; events
+* **JEL Classification:** E44, G13, G14, G15
+* **Abstract:** We investigate, using high-frequency data, how financialization has changed the im- pact of macroeconomic announcements on commodity futures returns and volatility. We find that greater financialization dampens the impact of macroeconomic release surprises on commodity markets, as measured by price drift and volatility changes. Moreover, financial participants improve liquidity and price discovery, while reduc- ing volatility. Since traditional market participants prefer stability, our results suggest a beneficial impact of financialization. When we disaggregate the results, we find that the beneficial effects of greater financial participation are linked to money managers rather than swap dealers.
+* [Link](https://github.com/simonpierreboucher/workingpaper/blob/main/PHD_CHAP1_20231203.pdf)
 
-**Boucher, Simon-Pierre** and Gagnon, Marie-Hélène and Power, Gabriel, Has Financialization Changed the Impact of Macro Announcements on Us Commodity Markets? (May 6, 2022). Available at SSRN: https://ssrn.com/abstract=4009292 or http://dx.doi.org/10.2139/ssrn.4009292
+#### Modeling Volatility Dynamics in Commodity ETFs: A Comparative Study using VAR-RV and HAR Models
 
-**Abstract**
+* **Author:** Boucher, Simon-Pierre, Gagnon, Marie-Hélène and Power, Gabriel
+* **Keywords:** commodities; futures; spillover; high-frequency; volatility
+* **JEL Classification:** E44, G13, G14, G15
 
-The transition to a sustainable energy future requires considerable investments, which can be discouraged by heightened volatility in commodity markets. We investigate, using high-frequency data, the impact of macroeconomic announcements on commodity futures returns and volatility, while accounting for the financialization of commodities. We find that financialization lessens the impact of macro news on commodity markets, as measured by price drift and volatility changes. This result is consistent with prior literature suggesting that financial participants improve liquidity and price discovery while reducing volatility. Assuming that traditional market participants prefer stability, our results suggest a beneficial impact of financialization, especially for pro-cyclical commodities such as crude oil and natural gas.
+* **Abstract:** In this research, we investigate the volatility dynamics in the commodity exchange- traded fund (ETF) market, a rapidly expanding sector. We utilize the Bayesian Vector Autoregression (BVAR) and Heterogeneous Autoregressive (HAR) models to gain in- sights into market behavior. Our analysis confirms the effectiveness of both models in capturing volatility dynamics. Particularly, we emphasize the influence of commod- ity prices on the volatility of commodity ETFs, underlining their interlinked nature. In the BVAR model, we observe a predominant spillover effect from the indicative net asset value (iNAV) to the ETF. This suggests that the iNAV, more than just reflecting market movements, actively influences the ETF’s volatility. The HAR model, with its time-varying betas, provides a detailed view of the changing risk exposures in this market, complementing our understanding of these dynamics. Our study contributes to existing literature by developing an intraday series for the ETF’s NAV, or iNAV. We document a bidirectional spillover between the ETF and its iNAV for ETFs backed by energy futures contracts, while a more pronounced spillover from iNAV to ETF is observed for those backed by metal futures contracts.
+* [Link](https://github.com/simonpierreboucher/workingpaper/blob/main/PHD_CHAP2_20231203.pdf)
 
-* Keywords: commodities; futures; spillover; financialization; high-frequency; commercial; institutional; volatility; macro; announcements; surprise; events
+#### Assessing the Efficacy of Intraday Volatility Measures in Response to Unexpected Macroeconomic Announcements
+* **Author:** Boucher, Simon-Pierre, Gagnon, Marie-Hélène and Power, Gabriel
+* **Keywords:** commodities; futures; spillover; high-frequency; volatility
+* **JEL Classification:** E44, G13, G14, G15
 
-* JEL Classification: E44, G13, G14, G15
+* **Abstract:** In this study, we investigate the high-frequency impact of macroeconomic announce- ments on the volatility of key futures contracts. We use three estimators of spot volatility: intraday periodicity, kernel estimation and the intraday GARCH model. Our main objective is to determine which of these estimators best captures the mar- ket’s reaction to macroeconomic announcements. Our results show that the intra- day GARCH model stands out as the most effective in capturing market responses to macroeconomic announcements.
+
+* [Link](https://github.com/simonpierreboucher/workingpaper/blob/main/PHD_CHAP3_20231203.pdf)

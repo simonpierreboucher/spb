@@ -1,0 +1,79 @@
+---
+title: "Least squares: two or more independent variables"
+format: html
+editor: visual
+author:
+  - name: Simon-Pierre Boucher
+    orcid: 0000-0002-3756-3937
+    email: simon-pierre.boucher.1@ulaval.ca
+    affiliations:
+      - name: Université Laval
+        address: 2325 Rue de Université
+        city: Québec
+        state: QC 
+        postal-code: G1V 0A6
+---
+
+In this chapter, we'll apply the ordinary least-squares method again, but this time if we have more than one independent variable. Here is a regression model with several variables.
+
+$$y=\beta_0+\beta_1 x_{1i}+\beta_2 x_{2i}+...+\beta_N X_{Ni}+\epsilon$$
+
+To simplify the model, we will now use the matrix format. Here is the change regarding the variables:
+
+
+
+- Let $Y$ be an $n \times 1$ vector of observations on the dependent variable.
+
+
+$$Y=\begin{pmatrix} y_1\\  y_2\\  \vdots\\ y_n\\ \end{pmatrix}$$      
+
+
+Let $\beta$ be an $m \times 1$ vector of unknown population parameters that we want to estimate.
+
+$$\beta=\begin{pmatrix} \beta_1\\  \beta_2\\  \vdots\\ \beta_n\\ \end{pmatrix}$$
+
+ 
+
+Let $\epsilon$ be an $n \times 1$ vector of disturbances or errors.
+
+
+
+$$\epsilon=\begin{pmatrix} \epsilon_1\\  \epsilon_2\\  \vdots\\ \epsilon_n\\ \end{pmatrix}$$    
+
+
+Let $X$ be an $n \times m$ matrix where we have observations on $m$ independent variables for $n$ observations.
+
+
+$$X=\begin{bmatrix}  1&x_{11}  &x_{21}  &\cdots   &x_{n1} \\   1&x_{12}  &x_{22}  & \cdots &x_{n2} \\   \vdots & \vdots  & \vdots  & \ddots  & \vdots\\   1&x_{1m}  & \cdots & \cdots &x_{nm} \end{bmatrix}$$
+
+
+
+This allows us to rewrite the model in a simplified way
+
+$$Y=X'\beta+\epsilon$$
+
+Find the estimator of $\beta$ by minimizing the sum of squared residuals $(\epsilon' \epsilon)$
+
+$$\epsilon'\epsilon=(Y-X'\beta)'(Y-X'\beta)$$
+
+$$\epsilon'\epsilon= Y'Y-\beta'X'Y-Y'X \beta + \beta'X'X \beta$$
+
+$$\epsilon'\epsilon= Y'Y -2 \beta' X'Y+ \beta'X'X \beta$$
+
+The partial derivatives with respect to $\beta$ is solved as follows :
+
+$$\frac{\partial \epsilon'\epsilon}{\partial \beta}= 0$$
+
+It is now possible for us to find the value of $\beta$:
+
+$$-2X'Y+2X'X \beta=0$$
+
+$$X'Y=X'X \beta$$
+
+The solution for the estimator of $\beta$:
+
+$$\hat{\beta}=(X'X)^{-1}X'Y$$
+
+
+
+

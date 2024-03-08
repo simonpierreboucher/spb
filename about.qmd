@@ -49,3 +49,5 @@ comments: false
 ### TECHNICAL STRENGTHS
 * **Computer Languages:** SAS, R, MatLab, STATA, Python, SQL, Latex
 * **Databases:** COMPUSTAT, CRSP, Bloomberg, Morningstar, Thomson Reuters
+
+

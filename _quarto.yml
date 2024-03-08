@@ -22,7 +22,7 @@ description-meta: "Andreas Handel's personal website."
 
 website:
   title: "Simon-Pierre Boucher"
-  site-url: "https://www.andreashandel.com"
+  site-url: "https://www.spboucher.net"
   repo-url: https://github.com/simonpierreboucher
   description: "Website of Simon-Pierre Boucher"
   favicon: /files/icon.png 
@@ -40,6 +40,8 @@ website:
         file: teaching.qmd
       - text: "Research"
         file: research.qmd
+      - text: "Posts"
+        file: posts.qmd
 
   page-footer:
     left: |

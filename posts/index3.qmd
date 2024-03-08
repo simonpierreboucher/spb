@@ -1,0 +1,67 @@
+---
+title: "Simple Linear Model"
+format: html
+editor: visual
+author:
+  - name: Simon-Pierre Boucher
+    orcid: 0000-0002-3756-3937
+    email: simon-pierre.boucher.1@ulaval.ca
+    affiliations:
+      - name: Université Laval
+        address: 2325 Rue de Université
+        city: Québec
+        state: QC 
+        postal-code: G1V 0A6
+---
+# Simple Linear Model
+
+The intuition behind a simple linear regression model is simply to relate two variables having a theoretical economic relationship. The model will allow us to check whether this relation is also reflected empirically. Whether in economics or finance, there are several asset pricing models with a strong theoretical foundation that are not reflected empirically. The best example is the Capital Asset Pricing Model (CAPM), linking the risk premium of the market portfolio with the risk premium of an individual security. The theoretical model can therefore be represented as follows:
+
+$$E(R_i)=R_f+\beta_{i,m} [E(R_m)-R_f]$$
+
+Where : 
+
+* $\beta_{i,m}$ represents a measure of the systematic risk of the asset
+* $E(R_m)$ represents the expected profitability on the market
+* $R_f$ represents the risk free interest rate
+* $E(R_i)$ represents  the expected profitability on asset $i$
+
+Since we are going to want to estimate this model empirically, we will use the realized values for the return on asset i, the market and the risk-free rate. The empirical format of the CAPM can therefore be represented as follows:
+
+$$(R_i-R_f)=\alpha+\beta(R_m-R_f)+\epsilon$$
+
+Where :
+
+- $(R_i-R_f)$ represents the dependent variable (we seek to explain the variation of this variable)
+- $(R_m-R_f)$ represents the independent variable(we will use this variable to explain the independent variable)
+- $\alpha$ is the coefficient estimating the proportion of the excess return on the asset $i$ which is unexplained by the systematic risk
+- $\beta$ is the coefficient estimating the proportion of the excess return on the asset $i$ which is explained by the systematic risk
+- $\epsilon$ represents the error in our model, that is, the variations in return related to idiosyncratic risk.
+
+
+This is a specific example of a simple linear regression model and this specification is by no means exhaustive. To have a uniform notation, the simple linear regression model will be represented as follows:
+
+$$y_i=\beta_0+\beta_1x_i+e_i$$
+
+Where :
+
+- $y_i$ represents the dependent variable for the observation $i$ 
+- $x_i$ represents the independent variable for the observation $i$
+- $\beta_0$ represents the intercept estimator of our model
+- $\beta_1$ represents the slope estimator of our model
+- $\epsilon_i$ represents the error made by the model
+
+The error term $\epsilon_i$ represents the difference between the actual value of our dependent variable and its estimated value. If our model is correctly specified then the error term should not contain any structure linking it to our dependent variable. In other words, the error term $\epsilon_i$ must be independent and identically distributed random variable with mean zero and constant variance $\sigma^2$. 
+
+$$\epsilon \sim iid(0,\sigma^2)$$
+
+Since the error term is a random variable then, the dependent variable is also a random variable with the following expectation:
+
+
+$$E(y_i)=E[\beta_0+\beta_1x_i+\epsilon_i]   =E(\beta_0+\beta_1x_i)+E(\epsilon_i)  =\beta_0+\beta_1x_i$$
+
+As for the variance of our dependent variable, we find it as follows:
+
+$$Var(y_i)=Var[\beta_0+\beta_1x_i+\epsilon_i]   =Var(\beta_0+\beta_1x_i)+Var(\epsilon_i)  =Var(\epsilon_i)  =\sigma^2$$
+
+
