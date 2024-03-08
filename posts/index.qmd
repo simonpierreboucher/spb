@@ -2,6 +2,10 @@
 title: "R script is designed to plot a budget constraint and an indifference curve "
 format: html
 editor: visual
+categories:
+  - R script
+  - Budget constraint 
+  - Indifference curve 
 author:
   - name: Simon-Pierre Boucher
     orcid: 0000-0002-3756-3937

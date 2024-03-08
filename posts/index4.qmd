@@ -2,6 +2,11 @@
 title: "Least squares: two or more independent variables"
 format: html
 editor: visual
+categories:
+  - Least squares
+  - Independent variables
+  - Econometrics
+  - Matrix form
 author:
   - name: Simon-Pierre Boucher
     orcid: 0000-0002-3756-3937

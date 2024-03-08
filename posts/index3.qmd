@@ -2,6 +2,10 @@
 title: "Simple Linear Model"
 format: html
 editor: visual
+categories:
+  - Simple Linear Model
+  - Regression
+  - Econometrics
 author:
   - name: Simon-Pierre Boucher
     orcid: 0000-0002-3756-3937
@@ -13,7 +17,7 @@ author:
         state: QC 
         postal-code: G1V 0A6
 ---
-# Simple Linear Model
+
 
 The intuition behind a simple linear regression model is simply to relate two variables having a theoretical economic relationship. The model will allow us to check whether this relation is also reflected empirically. Whether in economics or finance, there are several asset pricing models with a strong theoretical foundation that are not reflected empirically. The best example is the Capital Asset Pricing Model (CAPM), linking the risk premium of the market portfolio with the risk premium of an individual security. The theoretical model can therefore be represented as follows:
 

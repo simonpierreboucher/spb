@@ -2,6 +2,12 @@
 title: "R function that computes all the main descriptive statistics"
 format: html
 editor: visual
+categories:
+  - Descriptive statistics 
+  - Mean 
+  - Variance 
+  - Skewness 
+  - Kurtosis
 author:
   - name: Simon-Pierre Boucher
     orcid: 0000-0002-3756-3937

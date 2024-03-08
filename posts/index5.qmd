@@ -2,6 +2,10 @@
 title: "Least squares estimation"
 format: html
 editor: visual
+categories:
+  - Least squares
+  - Method by summation
+  - Econometrics
 author:
   - name: Simon-Pierre Boucher
     orcid: 0000-0002-3756-3937

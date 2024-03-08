@@ -1,0 +1,51 @@
+---
+title: "Assumption of the Classical Linear Regression Model"
+format: html
+editor: visual
+categories:
+  - Assumption
+  - Linear Regression Model
+  - Econometrics
+author:
+  - name: Simon-Pierre Boucher
+    orcid: 0000-0002-3756-3937
+    email: simon-pierre.boucher.1@ulaval.ca
+    affiliations:
+      - name: Université Laval
+        address: 2325 Rue de l'Université
+        city: Québec
+        state: QC 
+        postal-code: G1V 0A6
+---
+
+The following assumptions must be present in order to obtain an unbiased estimator.Unbiasedness of OLS
+
+$$\hat{\beta}=(X'X)^{-1}X'Y$$$$\hat{\beta}=(X'X)^{-1}X'(X \beta+\epsilon)$$$$\hat{\beta}=(X'X)^{-1}X'X \beta +(X'X)^{-1}X' \epsilon$$$$\hat{\beta}=\beta+(X'X)^{-1}E(X'\epsilon)$$
+
+Since
+
+$$E[\epsilon \mid X]=0$$
+
+the OLS estimator is unbiased
+
+$$E[\hat{\beta}]=\beta$$Variance of OLS Estimators
+
+$$Var(\hat{\beta})=Var[\beta+(X'X)^{-1}X' \epsilon]$$$$Var(\hat{\beta})=Var[(X'X)^{-1}X' \epsilon]$$$$Var(\hat{\beta})=E[(X'X)^{-1}X'\epsilon \epsilon' X(X'X)^{-1}]$$$$Var(\hat{\beta})=(X'X)^{-1}X'E(\epsilon \epsilon') X(X'X)^{-1}$$$$Var(\hat{\beta})=(X'X)^{-1}X'\sigma^2 X(X'X)^{-1}$$Since $$(X'X)^{-1}(X'X)=1$$$$Var(\hat{\beta})=\sigma^2(X'X)^{-1}$$
+
+Assumption of the Classical Linear Regression Model:
+
+1\. **Linearity**: The model specifies a linear relationship between y and x
+
+$$y=X \beta+\epsilon$$`<!-- -->`{=html}2. **Full rank**: There is no exact linear relationship among any of the independent variables in the model.
+
+3\. **Exogeneity of the independent variables** : This means that the independent variables will not carry useful information for prediction of $\epsilon$
+
+$$E[\epsilon \mid X]=0$$`<!-- -->`{=html}4. **Homoscedasticity and nonautocorrelation** : $\epsilon$ has the same finite variance
+
+$$E[\epsilon'\epsilon \mid X]=\sigma^2 I$$
+
+5\. **Data generation: \$X\$** may be fixed or random.
+
+6\. **Normal distribution** : The disturbances are normally distributed
+
+$$\epsilon \mid X \sim N(0,\sigma^2 I)$$
