@@ -1,0 +1,171 @@
+---
+title: "Shiny App with FMP api"
+format: html
+editor: visual
+categories:
+  - Shiny App
+  - financialmodelingprep
+  - Backend
+author:
+  - name: Simon-Pierre Boucher
+    orcid: 0000-0002-3756-3937
+    email: simon-pierre.boucher.1@ulaval.ca
+    affiliations:
+      - name: Université Laval
+        address: 2325 Rue de l'Université
+        city: Québec
+        state: QC 
+        postal-code: G1V 0A6
+---
+
+
+#### Stock Info 
+
+```r
+library(httr)
+library(jsonlite)
+library(shiny)
+library(DT)
+library(shinythemes)
+ui <- fluidPage(
+  theme = shinytheme("spacelab"),  # Changer le thème global
+  titlePanel("Company Information"),
+  sidebarLayout(
+    sidebarPanel(
+      textInput("symbol", "Enter Ticker Symbol (e.g., AAPL):"),
+      selectInput("info_type", "Select Information Type:",
+                  choices = c("Executive Compensation", "Company Notes", "Historical Employee Count", "Company Grade", "Key Executives"),
+                  selected = "Company Profile"),
+      actionButton("submit", "Submit")
+    ),
+    mainPanel(
+      tabsetPanel(
+        tabPanel("Data", DTOutput("company_data"))
+      )
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  
+  # Function to fetch data from API
+  getData <- function(symbol, info_type) {
+    url <- switch(info_type,
+                  "Executive Compensation" = paste0("https://financialmodelingprep.com/api/v4/governance/executive_compensation?symbol=", symbol, "&apikey=80a99c1566222d51909a6964da25976d"),
+                  "Company Notes" = paste0("https://financialmodelingprep.com/api/v4/company-notes?symbol=", symbol, "&apikey=80a99c1566222d51909a6964da25976d"),
+                  "Historical Employee Count" = paste0("https://financialmodelingprep.com/api/v4/historical/employee_count?symbol=", symbol, "&apikey=80a99c1566222d51909a6964da25976d"),
+                  "Company Grade" = paste0("https://financialmodelingprep.com/api/v3/grade/", symbol, "?apikey=80a99c1566222d51909a6964da25976d"),
+                  "Key Executives" = paste0("https://financialmodelingprep.com/api/v3/key-executives/", symbol, "?apikey=80a99c1566222d51909a6964da25976d")
+    )
+    
+    response <- GET(url)
+    content <- content(response, "text", encoding = "UTF-8")
+    df <- as.data.frame(fromJSON(content))
+    return(df)
+  }
+  
+  # Reactive expression for fetching data
+  company_data <- eventReactive(input$submit, {
+    req(input$symbol)
+    req(input$info_type)
+    getData(input$symbol, input$info_type)
+  })
+  
+  output$company_data <- renderDT({
+    datatable(company_data(), extensions = 'Buttons', 
+              options = list(scrollX=TRUE, lengthMenu = c(5000,10000),
+                             paging = TRUE, searching = TRUE,
+                             fixedColumns = FALSE, autoWidth = TRUE,
+                             ordering = TRUE, dom = 'Bfrtip'))
+  })
+}
+
+shinyApp(ui = ui, server = server)
+
+
+```
+
+
+#### Stock financial statement 
+
+```{r}
+library(httr)
+library(jsonlite)
+library(shiny)
+library(DT)
+library(shinythemes)
+library(shinythemes)
+ui <- fluidPage(
+  theme = shinytheme("spacelab"),  # Changer le thème global
+  titlePanel("Financial Statements"),
+  sidebarLayout(
+    sidebarPanel(
+      textInput("symbol", "Enter Ticker Symbol (e.g., AAPL):"),
+      selectInput("statement", "Select Financial Statement:",
+                  choices = c("Income Statement", "Balance Sheet Statement", "Cash Flow Statement"),
+                  selected = "Income Statement"),
+      selectInput("period", "Select Period:",
+                  choices = c("Annual", "Quarterly"),
+                  selected = "Annual"),
+      actionButton("submit", "Submit")
+    ),
+    mainPanel(
+      tabsetPanel(
+        tabPanel("Data", DTOutput("financial_data"))
+      )
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  
+  # Function to fetch data from API
+  getData <- function(symbol, statement, period) {
+    statement_type <- switch(statement,
+                             "Income Statement" = "income-statement",
+                             "Balance Sheet Statement" = "balance-sheet-statement",
+                             "Cash Flow Statement" = "cash-flow-statement")
+    
+    period_type <- switch(period,
+                          "Annual" = "annual",
+                          "Quarterly" = "quarter")
+    
+    url <- paste0("https://financialmodelingprep.com/api/v3/", statement_type, "/", symbol, "?period=", period_type, "&apikey=80a99c1566222d51909a6964da25976d")
+    response <- GET(url)
+    content <- content(response, "text", encoding = "UTF-8")
+    df <- as.data.frame(fromJSON(content))
+    return(df)
+  }
+  
+  # Reactive expression for fetching data
+  financial_data <- eventReactive(input$submit, {
+    req(input$symbol)
+    req(input$statement)
+    req(input$period)
+    getData(input$symbol, input$statement, input$period)
+  })
+  
+  output$financial_data <- renderDT({
+    datatable(financial_data(), extensions = 'Buttons', 
+              options = list(scrollX=TRUE, lengthMenu = c(5000,10000),
+                             paging = TRUE, searching = TRUE,
+                             fixedColumns = FALSE, autoWidth = TRUE,
+                             ordering = TRUE, dom = 'Bfrtip',
+                             buttons = list(
+                               list(
+                                 extend = "collection",
+                                 buttons = c('csv', 'excel'),
+                                 text = 'Download',
+                                 filename = "financial_data"
+                               )
+                             )
+              )
+    )
+  })
+}
+
+shinyApp(ui = ui, server = server)
+
+
+```
+
