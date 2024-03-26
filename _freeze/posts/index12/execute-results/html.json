@@ -1,0 +1,14 @@
+{
+  "hash": "91c77cc07dbac56f47aa07cb7402d819",
+  "result": {
+    "markdown": "---\ntitle: \"Logit regression with R\"\nformat: html\neditor: visual\ncategories:\n  - Logit model\n  - Generalized Least Squares\n  - GLM() package\nauthor:\n  - name: Simon-Pierre Boucher\n    orcid: 0000-0002-3756-3937\n    email: simon-pierre.boucher.1@ulaval.ca\n    affiliations:\n      - name: Université Laval\n        address: 2325 Rue de l'Université\n        city: Québec\n        state: QC \n        postal-code: G1V 0A6\n---\n\n\n# Generating simulated data for logistic regression model\n### Set seed for reproducibility\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(123)\n```\n:::\n\n\n### Number of observations\n\n\n::: {.cell}\n\n```{.r .cell-code}\nn <- 100\n```\n:::\n\n\n### Generate predictor variables x1, x2, and x3\n\n\n::: {.cell}\n\n```{.r .cell-code}\nx1 <- rnorm(n)\nx2 <- rnorm(n)\nx3 <- rnorm(n)\n```\n:::\n\n\n### Generate a binary outcome variable y based on predictor variables with logistic relation\n\n\n::: {.cell}\n\n```{.r .cell-code}\np <- 1 / (1 + exp(-(0.5*x1 + 0.8*x2 - 0.3*x3 + rnorm(n))))\ny <- rbinom(n, 1, p)\n```\n:::\n\n\n### Create a dataframe containing all variables\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndata <- data.frame(y, x1, x2, x3)\n```\n:::\n\n\n# Estimating a logistic regression model\n### Specifying the logistic regression model using glm()\n### Syntax: glm(outcome ~ predictor1 + predictor2 + ..., data = data_frame, family = binomial)\n\n\n::: {.cell}\n\n```{.r .cell-code}\nmodel <- glm(y ~ x1 + x2 + x3, data = data, family = binomial)\n```\n:::\n\n\n### Print summary of the model\n\n\n::: {.cell}\n\n```{.r .cell-code}\nsummary(model)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n\nCall:\nglm(formula = y ~ x1 + x2 + x3, family = binomial, data = data)\n\nCoefficients:\n            Estimate Std. Error z value Pr(>|z|)   \n(Intercept)  -0.1806     0.2277  -0.793  0.42764   \nx1            0.5952     0.2616   2.275  0.02289 * \nx2            0.8199     0.2524   3.248  0.00116 **\nx3           -0.2947     0.2431  -1.212  0.22543   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 137.63  on 99  degrees of freedom\nResidual deviance: 118.84  on 96  degrees of freedom\nAIC: 126.84\n\nNumber of Fisher Scoring iterations: 4\n```\n:::\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

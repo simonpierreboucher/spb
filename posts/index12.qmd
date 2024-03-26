@@ -1,11 +1,11 @@
 ---
-title: "Linear regression with R et package lm()"
+title: "Logit regression with R"
 format: html
 editor: visual
 categories:
-  - Linear model
-  - OLS
-  - lm() package
+  - Logit model
+  - Generalized Least Squares
+  - GLM() package
 author:
   - name: Simon-Pierre Boucher
     orcid: 0000-0002-3756-3937
@@ -18,18 +18,19 @@ author:
         postal-code: G1V 0A6
 ---
 
-# Generating simulated data for linear model
+# Generating simulated data for logistic regression model
 ### Set seed for reproducibility
 
 ```{r}
 set.seed(123)
 ```
 
-
 ### Number of observations
+
 ```{r}
 n <- 100
 ```
+
 ### Generate predictor variables x1, x2, and x3
 
 ```{r}
@@ -38,13 +39,12 @@ x2 <- rnorm(n)
 x3 <- rnorm(n)
 ```
 
-
-### Generate outcome variable y based on predictor variables with noise
+### Generate a binary outcome variable y based on predictor variables with logistic relation
 
 ```{r}
-y <- 2*x1 + 3*x2 - 1.5*x3 + rnorm(n)
+p <- 1 / (1 + exp(-(0.5*x1 + 0.8*x2 - 0.3*x3 + rnorm(n))))
+y <- rbinom(n, 1, p)
 ```
-
 
 ### Create a dataframe containing all variables
 
@@ -52,12 +52,12 @@ y <- 2*x1 + 3*x2 - 1.5*x3 + rnorm(n)
 data <- data.frame(y, x1, x2, x3)
 ```
 
-# Estimating a linear model
-### Specifying the linear model using lm()
-### Syntax: lm(outcome ~ predictor1 + predictor2 + ..., data = data_frame)
+# Estimating a logistic regression model
+### Specifying the logistic regression model using glm()
+### Syntax: glm(outcome ~ predictor1 + predictor2 + ..., data = data_frame, family = binomial)
 
 ```{r}
-model <- lm(y ~ x1 + x2 + x3, data = data)
+model <- glm(y ~ x1 + x2 + x3, data = data, family = binomial)
 ```
 
 ### Print summary of the model

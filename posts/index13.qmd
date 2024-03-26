@@ -1,0 +1,93 @@
+---
+title: "ARMA regression with R"
+format: html
+editor: visual
+categories:
+  - Logit model
+  - Generalized Least Squares
+  - GLM() package
+author:
+  - name: Simon-Pierre Boucher
+    orcid: 0000-0002-3756-3937
+    email: simon-pierre.boucher.1@ulaval.ca
+    affiliations:
+      - name: Université Laval
+        address: 2325 Rue de l'Université
+        city: Québec
+        state: QC 
+        postal-code: G1V 0A6
+---
+# Load necessary library for ARMA models
+
+```{r}
+library(forecast)
+```
+
+# Set seed for reproducibility
+
+```{r}
+set.seed(123)
+```
+
+# Generating simulated data for AR(1) model
+### Number of observations
+
+```{r}
+n <- 100
+```
+
+### Generate AR(1) time series with AR coefficient = 0.7 and white noise
+
+```{r}
+ar1_data <- arima.sim(n = n, model = list(ar = 0.7))
+```
+
+# Estimating AR(1) model
+
+```{r}
+ar1_model <- Arima(ar1_data, order = c(1, 0, 0))
+```
+
+# Print summary of AR(1) model
+
+```{r}
+summary(ar1_model)
+```
+
+# Generating simulated data for MA(1) model
+### Generate MA(1) time series with MA coefficient = 0.5 and white noise
+
+```{r}
+ma1_data <- arima.sim(n = n, model = list(ma = 0.5))
+```
+
+# Estimating MA(1) model
+
+```{r}
+ma1_model <- Arima(ma1_data, order = c(0, 0, 1))
+```
+
+# Print summary of MA(1) model
+
+```{r}
+summary(ma1_model)
+```
+
+# Generating simulated data for ARMA(1,1) model
+### Generate ARMA(1,1) time series with AR coefficient = 0.6, MA coefficient = 0.4, and white noise
+
+```{r}
+arma11_data <- arima.sim(n = n, model = list(ar = 0.6, ma = 0.4))
+```
+
+# Estimating ARMA(1,1) model
+
+```{r}
+arma11_model <- Arima(arma11_data, order = c(1, 0, 1))
+```
+
+# Print summary of ARMA(1,1) model
+
+```{r}
+summary(arma11_model)
+```

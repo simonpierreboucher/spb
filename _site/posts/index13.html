@@ -9,7 +9,7 @@
 <meta name="author" content="Simon-Pierre Boucher">
 <meta name="description" content="Andreas Handel’s personal website.">
 
-<title>Simon-Pierre Boucher - Linear regression with R et package lm()</title>
+<title>Simon-Pierre Boucher - ARMA regression with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,7 +121,7 @@ cookieconsent.run({
 
 
 <link rel="stylesheet" href="../customstyle.css">
-<meta name="twitter:title" content="Simon-Pierre Boucher - Linear regression with R et package lm()">
+<meta name="twitter:title" content="Simon-Pierre Boucher - ARMA regression with R">
 <meta name="twitter:image" content="https://www.spboucher.net/posts/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:creator" content="@spbou4">
 <meta name="twitter:card" content="summary_large_image">
@@ -175,11 +175,11 @@ cookieconsent.run({
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Linear regression with R et package lm()</h1>
+      <h1 class="title">ARMA regression with R</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Linear model</div>
-                <div class="quarto-category">OLS</div>
-                <div class="quarto-category">lm() package</div>
+                <div class="quarto-category">Logit model</div>
+                <div class="quarto-category">Generalized Least Squares</div>
+                <div class="quarto-category">GLM() package</div>
               </div>
                   </div>
   </div>
@@ -213,20 +213,27 @@ cookieconsent.run({
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#generating-simulated-data-for-linear-model" id="toc-generating-simulated-data-for-linear-model" class="nav-link active" data-scroll-target="#generating-simulated-data-for-linear-model">Generating simulated data for linear model</a>
-  <ul class="collapse">
+  <li><a href="#load-necessary-library-for-arma-models" id="toc-load-necessary-library-for-arma-models" class="nav-link active" data-scroll-target="#load-necessary-library-for-arma-models">Load necessary library for ARMA models</a></li>
   <li><a href="#set-seed-for-reproducibility" id="toc-set-seed-for-reproducibility" class="nav-link" data-scroll-target="#set-seed-for-reproducibility">Set seed for reproducibility</a></li>
-  <li><a href="#number-of-observations" id="toc-number-of-observations" class="nav-link" data-scroll-target="#number-of-observations">Number of observations</a></li>
-  <li><a href="#generate-predictor-variables-x1-x2-and-x3" id="toc-generate-predictor-variables-x1-x2-and-x3" class="nav-link" data-scroll-target="#generate-predictor-variables-x1-x2-and-x3">Generate predictor variables x1, x2, and x3</a></li>
-  <li><a href="#generate-outcome-variable-y-based-on-predictor-variables-with-noise" id="toc-generate-outcome-variable-y-based-on-predictor-variables-with-noise" class="nav-link" data-scroll-target="#generate-outcome-variable-y-based-on-predictor-variables-with-noise">Generate outcome variable y based on predictor variables with noise</a></li>
-  <li><a href="#create-a-dataframe-containing-all-variables" id="toc-create-a-dataframe-containing-all-variables" class="nav-link" data-scroll-target="#create-a-dataframe-containing-all-variables">Create a dataframe containing all variables</a></li>
-  </ul></li>
-  <li><a href="#estimating-a-linear-model" id="toc-estimating-a-linear-model" class="nav-link" data-scroll-target="#estimating-a-linear-model">Estimating a linear model</a>
+  <li><a href="#generating-simulated-data-for-ar1-model" id="toc-generating-simulated-data-for-ar1-model" class="nav-link" data-scroll-target="#generating-simulated-data-for-ar1-model">Generating simulated data for AR(1) model</a>
   <ul class="collapse">
-  <li><a href="#specifying-the-linear-model-using-lm" id="toc-specifying-the-linear-model-using-lm" class="nav-link" data-scroll-target="#specifying-the-linear-model-using-lm">Specifying the linear model using lm()</a></li>
-  <li><a href="#syntax-lmoutcome-predictor1-predictor2-data-data_frame" id="toc-syntax-lmoutcome-predictor1-predictor2-data-data_frame" class="nav-link" data-scroll-target="#syntax-lmoutcome-predictor1-predictor2-data-data_frame">Syntax: lm(outcome ~ predictor1 + predictor2 + …, data = data_frame)</a></li>
-  <li><a href="#print-summary-of-the-model" id="toc-print-summary-of-the-model" class="nav-link" data-scroll-target="#print-summary-of-the-model">Print summary of the model</a></li>
+  <li><a href="#number-of-observations" id="toc-number-of-observations" class="nav-link" data-scroll-target="#number-of-observations">Number of observations</a></li>
+  <li><a href="#generate-ar1-time-series-with-ar-coefficient-0.7-and-white-noise" id="toc-generate-ar1-time-series-with-ar-coefficient-0.7-and-white-noise" class="nav-link" data-scroll-target="#generate-ar1-time-series-with-ar-coefficient-0.7-and-white-noise">Generate AR(1) time series with AR coefficient = 0.7 and white noise</a></li>
   </ul></li>
+  <li><a href="#estimating-ar1-model" id="toc-estimating-ar1-model" class="nav-link" data-scroll-target="#estimating-ar1-model">Estimating AR(1) model</a></li>
+  <li><a href="#print-summary-of-ar1-model" id="toc-print-summary-of-ar1-model" class="nav-link" data-scroll-target="#print-summary-of-ar1-model">Print summary of AR(1) model</a></li>
+  <li><a href="#generating-simulated-data-for-ma1-model" id="toc-generating-simulated-data-for-ma1-model" class="nav-link" data-scroll-target="#generating-simulated-data-for-ma1-model">Generating simulated data for MA(1) model</a>
+  <ul class="collapse">
+  <li><a href="#generate-ma1-time-series-with-ma-coefficient-0.5-and-white-noise" id="toc-generate-ma1-time-series-with-ma-coefficient-0.5-and-white-noise" class="nav-link" data-scroll-target="#generate-ma1-time-series-with-ma-coefficient-0.5-and-white-noise">Generate MA(1) time series with MA coefficient = 0.5 and white noise</a></li>
+  </ul></li>
+  <li><a href="#estimating-ma1-model" id="toc-estimating-ma1-model" class="nav-link" data-scroll-target="#estimating-ma1-model">Estimating MA(1) model</a></li>
+  <li><a href="#print-summary-of-ma1-model" id="toc-print-summary-of-ma1-model" class="nav-link" data-scroll-target="#print-summary-of-ma1-model">Print summary of MA(1) model</a></li>
+  <li><a href="#generating-simulated-data-for-arma11-model" id="toc-generating-simulated-data-for-arma11-model" class="nav-link" data-scroll-target="#generating-simulated-data-for-arma11-model">Generating simulated data for ARMA(1,1) model</a>
+  <ul class="collapse">
+  <li><a href="#generate-arma11-time-series-with-ar-coefficient-0.6-ma-coefficient-0.4-and-white-noise" id="toc-generate-arma11-time-series-with-ar-coefficient-0.6-ma-coefficient-0.4-and-white-noise" class="nav-link" data-scroll-target="#generate-arma11-time-series-with-ar-coefficient-0.6-ma-coefficient-0.4-and-white-noise">Generate ARMA(1,1) time series with AR coefficient = 0.6, MA coefficient = 0.4, and white noise</a></li>
+  </ul></li>
+  <li><a href="#estimating-arma11-model" id="toc-estimating-arma11-model" class="nav-link" data-scroll-target="#estimating-arma11-model">Estimating ARMA(1,1) model</a></li>
+  <li><a href="#print-summary-of-arma11-model" id="toc-print-summary-of-arma11-model" class="nav-link" data-scroll-target="#print-summary-of-arma11-model">Print summary of ARMA(1,1) model</a></li>
   </ul>
 </nav>
 </nav>
@@ -240,93 +247,157 @@ cookieconsent.run({
 
 
 
-<section id="generating-simulated-data-for-linear-model" class="level1">
-<h1>Generating simulated data for linear model</h1>
-<section id="set-seed-for-reproducibility" class="level3">
-<h3 class="anchored" data-anchor-id="set-seed-for-reproducibility">Set seed for reproducibility</h3>
+<section id="load-necessary-library-for-arma-models" class="level1">
+<h1>Load necessary library for ARMA models</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forecast)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo </code></pre>
+</div>
 </div>
 </section>
+<section id="set-seed-for-reproducibility" class="level1">
+<h1>Set seed for reproducibility</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="generating-simulated-data-for-ar1-model" class="level1">
+<h1>Generating simulated data for AR(1) model</h1>
 <section id="number-of-observations" class="level3">
 <h3 class="anchored" data-anchor-id="number-of-observations">Number of observations</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="generate-predictor-variables-x1-x2-and-x3" class="level3">
-<h3 class="anchored" data-anchor-id="generate-predictor-variables-x1-x2-and-x3">Generate predictor variables x1, x2, and x3</h3>
+<section id="generate-ar1-time-series-with-ar-coefficient-0.7-and-white-noise" class="level3">
+<h3 class="anchored" data-anchor-id="generate-ar1-time-series-with-ar-coefficient-0.7-and-white-noise">Generate AR(1) time series with AR coefficient = 0.7 and white noise</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>x3 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="generate-outcome-variable-y-based-on-predictor-variables-with-noise" class="level3">
-<h3 class="anchored" data-anchor-id="generate-outcome-variable-y-based-on-predictor-variables-with-noise">Generate outcome variable y based on predictor variables with noise</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>x1 <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>x2 <span class="sc">-</span> <span class="fl">1.5</span><span class="sc">*</span>x3 <span class="sc">+</span> <span class="fu">rnorm</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="create-a-dataframe-containing-all-variables" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-dataframe-containing-all-variables">Create a dataframe containing all variables</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(y, x1, x2, x3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ar1_data <span class="ot">&lt;-</span> <span class="fu">arima.sim</span>(<span class="at">n =</span> n, <span class="at">model =</span> <span class="fu">list</span>(<span class="at">ar =</span> <span class="fl">0.7</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
-<section id="estimating-a-linear-model" class="level1">
-<h1>Estimating a linear model</h1>
-<section id="specifying-the-linear-model-using-lm" class="level3">
-<h3 class="anchored" data-anchor-id="specifying-the-linear-model-using-lm">Specifying the linear model using lm()</h3>
-</section>
-<section id="syntax-lmoutcome-predictor1-predictor2-data-data_frame" class="level3">
-<h3 class="anchored" data-anchor-id="syntax-lmoutcome-predictor1-predictor2-data-data_frame">Syntax: lm(outcome ~ predictor1 + predictor2 + …, data = data_frame)</h3>
+<section id="estimating-ar1-model" class="level1">
+<h1>Estimating AR(1) model</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2 <span class="sc">+</span> x3, <span class="at">data =</span> data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ar1_model <span class="ot">&lt;-</span> <span class="fu">Arima</span>(ar1_data, <span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="print-summary-of-the-model" class="level3">
-<h3 class="anchored" data-anchor-id="print-summary-of-the-model">Print summary of the model</h3>
+<section id="print-summary-of-ar1-model" class="level1">
+<h1>Print summary of AR(1) model</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ar1_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = y ~ x1 + x2 + x3, data = data)
-
-Residuals:
-     Min       1Q   Median       3Q      Max 
--2.49138 -0.65392  0.05664  0.67033  2.53210 
+<pre><code>Series: ar1_data 
+ARIMA(1,0,0) with non-zero mean 
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) -0.01933    0.10734   -0.18    0.858    
-x1           1.94455    0.11688   16.64   &lt;2e-16 ***
-x2           3.04622    0.10946   27.83   &lt;2e-16 ***
-x3          -1.55739    0.11223  -13.88   &lt;2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+         ar1    mean
+      0.7127  0.0226
+s.e.  0.0685  0.2947
 
-Residual standard error: 1.052 on 96 degrees of freedom
-Multiple R-squared:  0.9284,    Adjusted R-squared:  0.9262 
-F-statistic: 415.2 on 3 and 96 DF,  p-value: &lt; 2.2e-16</code></pre>
+sigma^2 = 0.768:  log likelihood = -128.04
+AIC=262.08   AICc=262.33   BIC=269.9
+
+Training set error measures:
+                       ME     RMSE       MAE      MPE     MAPE      MASE
+Training set -0.001587819 0.867547 0.6921088 46.25563 196.1183 0.9250022
+                     ACF1
+Training set -0.000391426</code></pre>
 </div>
 </div>
-
-
 </section>
+<section id="generating-simulated-data-for-ma1-model" class="level1">
+<h1>Generating simulated data for MA(1) model</h1>
+<section id="generate-ma1-time-series-with-ma-coefficient-0.5-and-white-noise" class="level3">
+<h3 class="anchored" data-anchor-id="generate-ma1-time-series-with-ma-coefficient-0.5-and-white-noise">Generate MA(1) time series with MA coefficient = 0.5 and white noise</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ma1_data <span class="ot">&lt;-</span> <span class="fu">arima.sim</span>(<span class="at">n =</span> n, <span class="at">model =</span> <span class="fu">list</span>(<span class="at">ma =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="estimating-ma1-model" class="level1">
+<h1>Estimating MA(1) model</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ma1_model <span class="ot">&lt;-</span> <span class="fu">Arima</span>(ma1_data, <span class="at">order =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="print-summary-of-ma1-model" class="level1">
+<h1>Print summary of MA(1) model</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ma1_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Series: ma1_data 
+ARIMA(0,0,1) with non-zero mean 
+
+Coefficients:
+         ma1     mean
+      0.4492  -0.0415
+s.e.  0.1335   0.1462
+
+sigma^2 = 1.044:  log likelihood = -143.15
+AIC=292.29   AICc=292.54   BIC=300.11
+
+Training set error measures:
+                      ME    RMSE       MAE      MPE    MAPE      MASE
+Training set 0.004793875 1.01147 0.7970893 100.1947 249.372 0.7896934
+                    ACF1
+Training set -0.09805895</code></pre>
+</div>
+</div>
+</section>
+<section id="generating-simulated-data-for-arma11-model" class="level1">
+<h1>Generating simulated data for ARMA(1,1) model</h1>
+<section id="generate-arma11-time-series-with-ar-coefficient-0.6-ma-coefficient-0.4-and-white-noise" class="level3">
+<h3 class="anchored" data-anchor-id="generate-arma11-time-series-with-ar-coefficient-0.6-ma-coefficient-0.4-and-white-noise">Generate ARMA(1,1) time series with AR coefficient = 0.6, MA coefficient = 0.4, and white noise</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>arma11_data <span class="ot">&lt;-</span> <span class="fu">arima.sim</span>(<span class="at">n =</span> n, <span class="at">model =</span> <span class="fu">list</span>(<span class="at">ar =</span> <span class="fl">0.6</span>, <span class="at">ma =</span> <span class="fl">0.4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="estimating-arma11-model" class="level1">
+<h1>Estimating ARMA(1,1) model</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>arma11_model <span class="ot">&lt;-</span> <span class="fu">Arima</span>(arma11_data, <span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="print-summary-of-arma11-model" class="level1">
+<h1>Print summary of ARMA(1,1) model</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(arma11_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Series: arma11_data 
+ARIMA(1,0,1) with non-zero mean 
+
+Coefficients:
+         ar1     ma1    mean
+      0.5427  0.4886  0.3597
+s.e.  0.0993  0.0978  0.3093
+
+sigma^2 = 0.9585:  log likelihood = -138.8
+AIC=285.6   AICc=286.02   BIC=296.02
+
+Training set error measures:
+                      ME      RMSE       MAE       MPE     MAPE      MASE
+Training set 0.002257675 0.9642397 0.7840184 -49.37364 259.2859 0.8741441
+                   ACF1
+Training set 0.04999869</code></pre>
+</div>
+</div>
+
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{boucher,
   author = {Boucher, Simon-Pierre},
-  title = {Linear Regression with {R} Et Package Lm()},
-  url = {https://www.spboucher.net/posts/index11.html},
+  title = {ARMA Regression with {R}},
+  url = {https://www.spboucher.net/posts/index13.html},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-boucher" class="csl-entry quarto-appendix-citeas" role="listitem">
-Boucher, Simon-Pierre. n.d. <span>“Linear Regression with R Et Package
-Lm().”</span> <a href="https://www.spboucher.net/posts/index11.html">https://www.spboucher.net/posts/index11.html</a>.
+Boucher, Simon-Pierre. n.d. <span>“ARMA Regression with R.”</span> <a href="https://www.spboucher.net/posts/index13.html">https://www.spboucher.net/posts/index13.html</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

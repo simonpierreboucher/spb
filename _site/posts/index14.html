@@ -9,7 +9,7 @@
 <meta name="author" content="Simon-Pierre Boucher">
 <meta name="description" content="Andreas Handel’s personal website.">
 
-<title>Simon-Pierre Boucher - Linear regression with R et package lm()</title>
+<title>Simon-Pierre Boucher - OLHC plot with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,7 +121,7 @@ cookieconsent.run({
 
 
 <link rel="stylesheet" href="../customstyle.css">
-<meta name="twitter:title" content="Simon-Pierre Boucher - Linear regression with R et package lm()">
+<meta name="twitter:title" content="Simon-Pierre Boucher - OLHC plot with R">
 <meta name="twitter:image" content="https://www.spboucher.net/posts/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:creator" content="@spbou4">
 <meta name="twitter:card" content="summary_large_image">
@@ -175,11 +175,11 @@ cookieconsent.run({
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Linear regression with R et package lm()</h1>
+      <h1 class="title">OLHC plot with R</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Linear model</div>
-                <div class="quarto-category">OLS</div>
-                <div class="quarto-category">lm() package</div>
+                <div class="quarto-category">Logit model</div>
+                <div class="quarto-category">Generalized Least Squares</div>
+                <div class="quarto-category">GLM() package</div>
               </div>
                   </div>
   </div>
@@ -213,20 +213,14 @@ cookieconsent.run({
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#generating-simulated-data-for-linear-model" id="toc-generating-simulated-data-for-linear-model" class="nav-link active" data-scroll-target="#generating-simulated-data-for-linear-model">Generating simulated data for linear model</a>
-  <ul class="collapse">
-  <li><a href="#set-seed-for-reproducibility" id="toc-set-seed-for-reproducibility" class="nav-link" data-scroll-target="#set-seed-for-reproducibility">Set seed for reproducibility</a></li>
-  <li><a href="#number-of-observations" id="toc-number-of-observations" class="nav-link" data-scroll-target="#number-of-observations">Number of observations</a></li>
-  <li><a href="#generate-predictor-variables-x1-x2-and-x3" id="toc-generate-predictor-variables-x1-x2-and-x3" class="nav-link" data-scroll-target="#generate-predictor-variables-x1-x2-and-x3">Generate predictor variables x1, x2, and x3</a></li>
-  <li><a href="#generate-outcome-variable-y-based-on-predictor-variables-with-noise" id="toc-generate-outcome-variable-y-based-on-predictor-variables-with-noise" class="nav-link" data-scroll-target="#generate-outcome-variable-y-based-on-predictor-variables-with-noise">Generate outcome variable y based on predictor variables with noise</a></li>
-  <li><a href="#create-a-dataframe-containing-all-variables" id="toc-create-a-dataframe-containing-all-variables" class="nav-link" data-scroll-target="#create-a-dataframe-containing-all-variables">Create a dataframe containing all variables</a></li>
-  </ul></li>
-  <li><a href="#estimating-a-linear-model" id="toc-estimating-a-linear-model" class="nav-link" data-scroll-target="#estimating-a-linear-model">Estimating a linear model</a>
-  <ul class="collapse">
-  <li><a href="#specifying-the-linear-model-using-lm" id="toc-specifying-the-linear-model-using-lm" class="nav-link" data-scroll-target="#specifying-the-linear-model-using-lm">Specifying the linear model using lm()</a></li>
-  <li><a href="#syntax-lmoutcome-predictor1-predictor2-data-data_frame" id="toc-syntax-lmoutcome-predictor1-predictor2-data-data_frame" class="nav-link" data-scroll-target="#syntax-lmoutcome-predictor1-predictor2-data-data_frame">Syntax: lm(outcome ~ predictor1 + predictor2 + …, data = data_frame)</a></li>
-  <li><a href="#print-summary-of-the-model" id="toc-print-summary-of-the-model" class="nav-link" data-scroll-target="#print-summary-of-the-model">Print summary of the model</a></li>
-  </ul></li>
+  <li><a href="#load-the-necessary-package" id="toc-load-the-necessary-package" class="nav-link active" data-scroll-target="#load-the-necessary-package">Load the necessary package</a></li>
+  <li><a href="#set-the-ticker-symbol-for-apple" id="toc-set-the-ticker-symbol-for-apple" class="nav-link" data-scroll-target="#set-the-ticker-symbol-for-apple">Set the ticker symbol for Apple</a></li>
+  <li><a href="#import-data-from-yahoo-finance" id="toc-import-data-from-yahoo-finance" class="nav-link" data-scroll-target="#import-data-from-yahoo-finance">Import data from Yahoo Finance</a></li>
+  <li><a href="#the-getsymbols-function-directly-assigns-the-data-to-a-variable-in-the-environment-with-the-same-name-as-the-symbol" id="toc-the-getsymbols-function-directly-assigns-the-data-to-a-variable-in-the-environment-with-the-same-name-as-the-symbol" class="nav-link" data-scroll-target="#the-getsymbols-function-directly-assigns-the-data-to-a-variable-in-the-environment-with-the-same-name-as-the-symbol">The ‘getSymbols’ function directly assigns the data to a variable in the environment with the same name as the symbol</a></li>
+  <li><a href="#plotting-the-data" id="toc-plotting-the-data" class="nav-link" data-scroll-target="#plotting-the-data">Plotting the data</a></li>
+  <li><a href="#chartseries-is-a-function-from-the-quantmod-package-that-provides-various-financial-charts-including-olhc" id="toc-chartseries-is-a-function-from-the-quantmod-package-that-provides-various-financial-charts-including-olhc" class="nav-link" data-scroll-target="#chartseries-is-a-function-from-the-quantmod-package-that-provides-various-financial-charts-including-olhc">‘chartSeries’ is a function from the quantmod package that provides various financial charts, including OLHC</a></li>
+  <li><a href="#here-we-use-it-to-plot-the-olhc-data-for-aapl" id="toc-here-we-use-it-to-plot-the-olhc-data-for-aapl" class="nav-link" data-scroll-target="#here-we-use-it-to-plot-the-olhc-data-for-aapl">Here, we use it to plot the OLHC data for AAPL</a></li>
+  <li><a href="#the-result-is-a-comprehensive-chart-displaying-the-open-low-high-and-close-prices-of-apple-stock" id="toc-the-result-is-a-comprehensive-chart-displaying-the-open-low-high-and-close-prices-of-apple-stock" class="nav-link" data-scroll-target="#the-result-is-a-comprehensive-chart-displaying-the-open-low-high-and-close-prices-of-apple-stock">The result is a comprehensive chart displaying the Open, Low, High, and Close prices of Apple stock</a></li>
   </ul>
 </nav>
 </nav>
@@ -240,93 +234,88 @@ cookieconsent.run({
 
 
 
-<section id="generating-simulated-data-for-linear-model" class="level1">
-<h1>Generating simulated data for linear model</h1>
-<section id="set-seed-for-reproducibility" class="level3">
-<h3 class="anchored" data-anchor-id="set-seed-for-reproducibility">Set seed for reproducibility</h3>
+<section id="load-the-necessary-package" class="level3">
+<h3 class="anchored" data-anchor-id="load-the-necessary-package">Load the necessary package</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quantmod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: xts</code></pre>
 </div>
-</section>
-<section id="number-of-observations" class="level3">
-<h3 class="anchored" data-anchor-id="number-of-observations">Number of observations</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: zoo</code></pre>
 </div>
-</section>
-<section id="generate-predictor-variables-x1-x2-and-x3" class="level3">
-<h3 class="anchored" data-anchor-id="generate-predictor-variables-x1-x2-and-x3">Generate predictor variables x1, x2, and x3</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>x3 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="generate-outcome-variable-y-based-on-predictor-variables-with-noise" class="level3">
-<h3 class="anchored" data-anchor-id="generate-outcome-variable-y-based-on-predictor-variables-with-noise">Generate outcome variable y based on predictor variables with noise</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>x1 <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>x2 <span class="sc">-</span> <span class="fl">1.5</span><span class="sc">*</span>x3 <span class="sc">+</span> <span class="fu">rnorm</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="create-a-dataframe-containing-all-variables" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-dataframe-containing-all-variables">Create a dataframe containing all variables</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(y, x1, x2, x3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="estimating-a-linear-model" class="level1">
-<h1>Estimating a linear model</h1>
-<section id="specifying-the-linear-model-using-lm" class="level3">
-<h3 class="anchored" data-anchor-id="specifying-the-linear-model-using-lm">Specifying the linear model using lm()</h3>
-</section>
-<section id="syntax-lmoutcome-predictor1-predictor2-data-data_frame" class="level3">
-<h3 class="anchored" data-anchor-id="syntax-lmoutcome-predictor1-predictor2-data-data_frame">Syntax: lm(outcome ~ predictor1 + predictor2 + …, data = data_frame)</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2 <span class="sc">+</span> x3, <span class="at">data =</span> data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="print-summary-of-the-model" class="level3">
-<h3 class="anchored" data-anchor-id="print-summary-of-the-model">Print summary of the model</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<div class="cell-output cell-output-stderr">
 <pre><code>
-Call:
-lm(formula = y ~ x1 + x2 + x3, data = data)
+Attaching package: 'zoo'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
 
-Residuals:
-     Min       1Q   Median       3Q      Max 
--2.49138 -0.65392  0.05664  0.67033  2.53210 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) -0.01933    0.10734   -0.18    0.858    
-x1           1.94455    0.11688   16.64   &lt;2e-16 ***
-x2           3.04622    0.10946   27.83   &lt;2e-16 ***
-x3          -1.55739    0.11223  -13.88   &lt;2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 1.052 on 96 degrees of freedom
-Multiple R-squared:  0.9284,    Adjusted R-squared:  0.9262 
-F-statistic: 415.2 on 3 and 96 DF,  p-value: &lt; 2.2e-16</code></pre>
+    as.Date, as.Date.numeric</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: TTR</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo </code></pre>
 </div>
 </div>
-
-
 </section>
+<section id="set-the-ticker-symbol-for-apple" class="level3">
+<h3 class="anchored" data-anchor-id="set-the-ticker-symbol-for-apple">Set the ticker symbol for Apple</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>symbol <span class="ot">&lt;-</span> <span class="st">'AAPL'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="import-data-from-yahoo-finance" class="level3">
+<h3 class="anchored" data-anchor-id="import-data-from-yahoo-finance">Import data from Yahoo Finance</h3>
+</section>
+<section id="the-getsymbols-function-directly-assigns-the-data-to-a-variable-in-the-environment-with-the-same-name-as-the-symbol" class="level3">
+<h3 class="anchored" data-anchor-id="the-getsymbols-function-directly-assigns-the-data-to-a-variable-in-the-environment-with-the-same-name-as-the-symbol">The ‘getSymbols’ function directly assigns the data to a variable in the environment with the same name as the symbol</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getSymbols</span>(symbol, <span class="at">src =</span> <span class="st">'yahoo'</span>, <span class="at">auto.assign =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "AAPL"</code></pre>
+</div>
+</div>
+</section>
+<section id="plotting-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-the-data">Plotting the data</h3>
+</section>
+<section id="chartseries-is-a-function-from-the-quantmod-package-that-provides-various-financial-charts-including-olhc" class="level3">
+<h3 class="anchored" data-anchor-id="chartseries-is-a-function-from-the-quantmod-package-that-provides-various-financial-charts-including-olhc">‘chartSeries’ is a function from the quantmod package that provides various financial charts, including OLHC</h3>
+</section>
+<section id="here-we-use-it-to-plot-the-olhc-data-for-aapl" class="level3">
+<h3 class="anchored" data-anchor-id="here-we-use-it-to-plot-the-olhc-data-for-aapl">Here, we use it to plot the OLHC data for AAPL</h3>
+<section id="start-by-specifying-the-chart-type-as-auto-which-automatically-selects-the-best-chart-type-based-on-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="start-by-specifying-the-chart-type-as-auto-which-automatically-selects-the-best-chart-type-based-on-the-data">Start by specifying the chart type as ‘auto’ which automatically selects the best chart type based on the data</h4>
+</section>
+<section id="the-theme-argument-allows-customization-of-the-chart-appearance.-charttheme-with-black-creates-a-dark-themed-chart" class="level4">
+<h4 class="anchored" data-anchor-id="the-theme-argument-allows-customization-of-the-chart-appearance.-charttheme-with-black-creates-a-dark-themed-chart">The ‘theme’ argument allows customization of the chart appearance. ‘chartTheme’ with ‘black’ creates a dark-themed chart</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chartSeries</span>(AAPL, <span class="at">type =</span> <span class="st">'auto'</span>, <span class="at">theme =</span> <span class="fu">chartTheme</span>(<span class="st">'black'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index14_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="the-result-is-a-comprehensive-chart-displaying-the-open-low-high-and-close-prices-of-apple-stock" class="level3">
+<h3 class="anchored" data-anchor-id="the-result-is-a-comprehensive-chart-displaying-the-open-low-high-and-close-prices-of-apple-stock">The result is a comprehensive chart displaying the Open, Low, High, and Close prices of Apple stock</h3>
+
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{boucher,
   author = {Boucher, Simon-Pierre},
-  title = {Linear Regression with {R} Et Package Lm()},
-  url = {https://www.spboucher.net/posts/index11.html},
+  title = {OLHC Plot with {R}},
+  url = {https://www.spboucher.net/posts/index14.html},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-boucher" class="csl-entry quarto-appendix-citeas" role="listitem">
-Boucher, Simon-Pierre. n.d. <span>“Linear Regression with R Et Package
-Lm().”</span> <a href="https://www.spboucher.net/posts/index11.html">https://www.spboucher.net/posts/index11.html</a>.
+Boucher, Simon-Pierre. n.d. <span>“OLHC Plot with R.”</span> <a href="https://www.spboucher.net/posts/index14.html">https://www.spboucher.net/posts/index14.html</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -42,8 +42,6 @@ website:
         file: research.qmd
       - text: "Posts"
         file: posts.qmd
-      - text: "Application"
-        file: app.qmd
 
   page-footer:
     left: |

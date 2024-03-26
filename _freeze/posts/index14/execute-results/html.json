@@ -1,0 +1,16 @@
+{
+  "hash": "7e5c7911ca41c4a370d8815ff39a47a2",
+  "result": {
+    "markdown": "---\ntitle: \"OLHC plot with R\"\nformat: html\neditor: visual\ncategories:\n  - Logit model\n  - Generalized Least Squares\n  - GLM() package\nauthor:\n  - name: Simon-Pierre Boucher\n    orcid: 0000-0002-3756-3937\n    email: simon-pierre.boucher.1@ulaval.ca\n    affiliations:\n      - name: Université Laval\n        address: 2325 Rue de l'Université\n        city: Québec\n        state: QC \n        postal-code: G1V 0A6\n---\n\n\n### Load the necessary package\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(quantmod)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nLoading required package: xts\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nLoading required package: zoo\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\n\nAttaching package: 'zoo'\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nLoading required package: TTR\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n```\n:::\n:::\n\n\n### Set the ticker symbol for Apple\n\n\n::: {.cell}\n\n```{.r .cell-code}\nsymbol <- 'AAPL'\n```\n:::\n\n\n### Import data from Yahoo Finance\n### The 'getSymbols' function directly assigns the data to a variable in the environment with the same name as the symbol\n\n::: {.cell}\n\n```{.r .cell-code}\ngetSymbols(symbol, src = 'yahoo', auto.assign = TRUE)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"AAPL\"\n```\n:::\n:::\n\n### Plotting the data\n### 'chartSeries' is a function from the quantmod package that provides various financial charts, including OLHC\n### Here, we use it to plot the OLHC data for AAPL\n\n#### Start by specifying the chart type as 'auto' which automatically selects the best chart type based on the data\n#### The 'theme' argument allows customization of the chart appearance. 'chartTheme' with 'black' creates a dark-themed chart\n\n\n::: {.cell}\n\n```{.r .cell-code}\nchartSeries(AAPL, type = 'auto', theme = chartTheme('black'))\n```\n\n::: {.cell-output-display}\n![](index14_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n\n### The result is a comprehensive chart displaying the Open, Low, High, and Close prices of Apple stock\n",
+    "supporting": [
+      "index14_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

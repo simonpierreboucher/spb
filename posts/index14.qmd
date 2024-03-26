@@ -1,0 +1,48 @@
+---
+title: "OLHC plot with R"
+format: html
+editor: visual
+categories:
+  - Logit model
+  - Generalized Least Squares
+  - GLM() package
+author:
+  - name: Simon-Pierre Boucher
+    orcid: 0000-0002-3756-3937
+    email: simon-pierre.boucher.1@ulaval.ca
+    affiliations:
+      - name: Université Laval
+        address: 2325 Rue de l'Université
+        city: Québec
+        state: QC 
+        postal-code: G1V 0A6
+---
+
+### Load the necessary package
+```{r}
+library(quantmod)
+```
+
+### Set the ticker symbol for Apple
+
+```{r}
+symbol <- 'AAPL'
+```
+
+### Import data from Yahoo Finance
+### The 'getSymbols' function directly assigns the data to a variable in the environment with the same name as the symbol
+```{r}
+getSymbols(symbol, src = 'yahoo', auto.assign = TRUE)
+```
+### Plotting the data
+### 'chartSeries' is a function from the quantmod package that provides various financial charts, including OLHC
+### Here, we use it to plot the OLHC data for AAPL
+
+#### Start by specifying the chart type as 'auto' which automatically selects the best chart type based on the data
+#### The 'theme' argument allows customization of the chart appearance. 'chartTheme' with 'black' creates a dark-themed chart
+
+```{r}
+chartSeries(AAPL, type = 'auto', theme = chartTheme('black'))
+```
+
+### The result is a comprehensive chart displaying the Open, Low, High, and Close prices of Apple stock
